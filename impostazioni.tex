@@ -1,0 +1,92 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File di Impostazioni per CV
+% Questo file contiene tutta la formattazione e lo stile.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%% --- PACCHETTI FONDAMENTALI ---
+\usepackage[utf8]{inputenc}     % Codifica del testo per accenti, etc.
+\usepackage[italian]{babel}     % Sillabazione e nomi in italiano
+\usepackage[T1]{fontenc}        % Migliore gestione dei font e dei caratteri speciali
+
+
+%%% --- GESTIONE FONT ---
+\usepackage{lmodern} % Font di default, pulito ma dà problemi (es. grassetto+maiuscoletto)
+% \usepackage{fourier}   % CONSIGLIATO: Font più completo e professionale, risolve problemi di stile
+
+
+%%% --- PACCHETTI PER GRAFICA E COLORI ---
+%\usepackage{microtype}			% Aggiunto per non andare a capo???????
+\usepackage{graphicx}           % Per inserire immagini (la tua foto)
+\usepackage[dvipsnames]{xcolor} % Per gestire colori avanzati (es. HTML, nomi di colori)
+
+%%% --- GEOMETRIA DELLA PAGINA E LAYOUT ---
+\usepackage[
+a4paper,
+left=1.8cm,
+right=1.8cm,
+top=1.8cm,
+bottom=1.3cm,
+nohead,
+nofoot
+]{geometry}
+
+
+%%% --- PACCHETTI PER STILE AVANZATO ---
+\usepackage{titlesec}           % Per personalizzare i titoli delle sezioni
+\usepackage{hyperref}           % Per rendere i link (email, web) cliccabili
+\usepackage[shortlabels]{enumitem} % Per personalizzare gli elenchi puntati
+
+
+
+
+%%% --- DEFINIZIONE DEGLI STILI PERSONALIZZATI ---
+
+
+% -- COLORE DI LINK E TITOLI SEZIONI --
+% Definisci qui i colori principali per cambiarli facilmente in tutto il documento
+\definecolor{headingcolor}{HTML}{003B4C}
+\definecolor{linkcolor}{HTML}{003B4C} % Un blu scuro professionale
+
+
+% -- CONFIGURAZIONE LINK --
+\hypersetup{
+	colorlinks=true,
+	urlcolor=linkcolor,
+	linkcolor=linkcolor,
+	}
+
+
+% -- SPAZIATURA --
+\setlength{\parskip}{0em}
+\setlength{\parindent}{0em}
+
+
+% -- TITOLI DI SEZIONE --
+% Definisci lo spessore della linea sotto i titoli.
+\newcommand{\barraTitoli}{{\titlerule[0.2pt]}}
+
+% Definisci il formato per le sezioni non numerate (\section*)
+\titleformat
+{name=\section,numberless}
+{\Large\scshape\raggedright\color{headingcolor}} % Formato del testo del titolo
+{} % Spazio per il numero (vuoto)
+{0em} % Spazio tra numero e titolo
+{} % Codice prima del titolo (vuoto)
+[\barraTitoli\vspace{7pt}] % Codice dopo il titolo (linea + spazio verticale)
+\titlespacing{\section}{0pt}{2ex}{1ex}
+
+% -- ELENCHI PUNTATI --
+
+% Definisci lo stile per renderli più compatti e con un pallino
+\setlist[itemize]{
+	leftmargin=*,
+	label=\textbullet,
+	itemsep=0.2em,
+	topsep=0.5em
+	}
+
+
+%%% --- FINE DELLE IMPOSTAZIONI ---
+
