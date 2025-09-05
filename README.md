@@ -11,3 +11,5 @@ Questo repository contiene la versione più aggiornata del mio Curriculum Vitae.
 ---
 
 *Ultimo aggiornamento: Settembre 2025*
+
+*Distribuito con la licenza [Creative Commons BY - NC - ND 4.0 Internazionale](LICENSE).*
